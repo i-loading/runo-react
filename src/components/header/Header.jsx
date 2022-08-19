@@ -3,7 +3,7 @@ import s from "./Header.module.scss";
 import SocialMedia from "./../ui/SocialMedia";
 import { IoSearchOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import { Menu, MenuButton, MenuList } from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 
 const MenuBurger = ({ classNameHandler }) => {
   return (
@@ -31,23 +31,27 @@ const MenuBurger = ({ classNameHandler }) => {
             </svg>
           </MenuButton>
           <MenuList>
-            <div className={s.links}>
-              <NavLink to="runo-react/" end className={classNameHandler}>
-                Home
-              </NavLink>
-              <NavLink to="runo-react/about" className={classNameHandler}>
-                About
-              </NavLink>
-              <NavLink to="runo-react/posts" end className={classNameHandler}>
-                Articles
-              </NavLink>
-              <NavLink to="runo-react/contact" className={classNameHandler}>
-                Contact us
-              </NavLink>
-            </div>
-            <div>
-              <SocialMedia />
-            </div>
+            <MenuItem>
+              <div className={s.links}>
+                <NavLink to="runo-react/" end className={classNameHandler}>
+                  Home
+                </NavLink>
+                <NavLink to="runo-react/about" className={classNameHandler}>
+                  About
+                </NavLink>
+                <NavLink to="runo-react/posts" end className={classNameHandler}>
+                  Articles
+                </NavLink>
+                <NavLink to="runo-react/contact" className={classNameHandler}>
+                  Contact us
+                </NavLink>
+              </div>
+            </MenuItem>
+            <MenuItem>
+              <div>
+                <SocialMedia />
+              </div>
+            </MenuItem>
           </MenuList>
         </>
       )}
