@@ -1,0 +1,70 @@
+.about-header {
+  background: url("../../assets/img/bg-five.png") no-repeat center center /
+    cover;
+  padding: 195px 0;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    span.cat {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+    }
+    h2 {
+      max-width: 530px;
+      padding: 13px 0;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 46px;
+      color: #ffffff;
+      text-align: center;
+    }
+    p {
+      font-size: 12px;
+      line-height: 20px;
+      color: #e5e5e5;
+      max-width: 420px;
+      text-align: center;
+    }
+    span.date {
+      margin-top: 13px;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+  }
+}
+
+.about-main {
+  margin: 100px 0;
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: #495057;
+    margin-bottom: 50px;
+  }
+  .quote {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    color: #d4a373;
+  }
+  hr {
+    width: 100%;
+    height: 1px;
+    background: #c4c4c4;
+    margin: 50px 0;
+  }
+}
