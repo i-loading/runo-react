@@ -228,7 +228,7 @@ const Posts = ({ postsAmount = 16 }) => {
               {b.title}
             </button>
           ))}
-          <NavLink to="/runo-react/posts/">
+          <NavLink to="/runo-react/posts">
             <button onClick={() => (buttons[0].activeFirst = true)}>
               View All
             </button>
