@@ -48,11 +48,19 @@
     }
   }
   .posts_wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    // grid-column-gap: 20px;
+    // grid-row-gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    & > a {
+      margin: 25px 20px 25px 0;
+    }
+    & > a:nth-child(4n) {
+      margin-right: 0;
+    }
     @media screen and (max-width: 1380px) {
       display: flex;
       justify-content: space-evenly;

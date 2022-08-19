@@ -184,7 +184,9 @@ const allPostsFilter = (category, amount = 8) => {
 };
 
 const Posts = ({ postsAmount = 16 }) => {
-  const checkPage = window.location.pathname === "/" ? 8 : postsAmount;
+  const checkPage =
+    window.location.pathname === "/runo-react" ? 8 : postsAmount;
+  console.log(checkPage);
   const [posts, setPosts] = useState(() => allPostsFilter(null, checkPage));
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -201,7 +203,7 @@ const Posts = ({ postsAmount = 16 }) => {
       case "branding":
         return setPosts(() => allPostsFilter(category, checkPage));
       default:
-        return setPosts(() => allPostsFilter());
+        return setPosts(() => allPostsFilter(null, checkPage));
     }
   };
   return (
@@ -226,7 +228,7 @@ const Posts = ({ postsAmount = 16 }) => {
               {b.title}
             </button>
           ))}
-          <NavLink to="/posts/">
+          <NavLink to="/runo-react/posts/">
             <button onClick={() => (buttons[0].activeFirst = true)}>
               View All
             </button>
@@ -234,7 +236,7 @@ const Posts = ({ postsAmount = 16 }) => {
         </div>
         <div className={s.posts_wrapper}>
           {posts.map((post) => (
-            <NavLink key={post.id} to={`/posts/${post.id}`}>
+            <NavLink key={post.id} to={`/runo-react/posts/${post.id}`}>
               <Post {...post} />
             </NavLink>
           ))}

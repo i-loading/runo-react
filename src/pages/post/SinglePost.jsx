@@ -148,7 +148,7 @@ const SinglePost = () => {
           <h3>Related Posts</h3>
           <div className={s["related_wrap"]}>
             {allPosts.map((post) => (
-              <NavLink key={post.id} to={`/posts/${post.id}`}>
+              <NavLink key={post.id} to={`/runo-react/posts/${post.id}`}>
                 <Post {...post} />
               </NavLink>
             ))}
