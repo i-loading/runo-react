@@ -16,7 +16,7 @@ export default function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="runo-react" element={<Home />} />
+        <Route path="runo-react/" element={<Home />} />
         <Route path="runo-react/about" element={<About />} />
         <Route path="runo-react/posts" element={<Articles />} />
         <Route path="runo-react/posts/:postId" element={<SinglePost />} />
