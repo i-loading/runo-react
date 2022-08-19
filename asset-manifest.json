@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/runo-react/static/css/main.7407f870.css",
+    "main.css": "/runo-react/static/css/main.de4be22c.css",
     "main.js": "/runo-react/static/js/main.e2abcc30.js",
     "static/media/bg-four.png": "/runo-react/static/media/bg-four.ed747b6829d94e8bd88c.png",
     "static/media/bg-two.png": "/runo-react/static/media/bg-two.b4d1509fbfb523845694.png",
@@ -29,11 +29,11 @@
     "static/media/topic-eight.png": "/runo-react/static/media/topic-eight.bba6de7663bcdb06cccd.png",
     "static/media/topic-twelve.png": "/runo-react/static/media/topic-twelve.009617ec73bb0ffc8aeb.png",
     "index.html": "/runo-react/index.html",
-    "main.7407f870.css.map": "/runo-react/static/css/main.7407f870.css.map",
+    "main.de4be22c.css.map": "/runo-react/static/css/main.de4be22c.css.map",
     "main.e2abcc30.js.map": "/runo-react/static/js/main.e2abcc30.js.map"
   },
   "entrypoints": [
-    "static/css/main.7407f870.css",
+    "static/css/main.de4be22c.css",
     "static/js/main.e2abcc30.js"
   ]
 }
