@@ -52,11 +52,18 @@
     flex-wrap: wrap;
     & > a {
       margin: 25px 20px 25px 0;
+      @media screen and (max-width: 660px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
     & > a:nth-child(4n) {
       margin-right: 0;
       @media screen and (max-width: 1340px) {
         margin-right: 20px;
+      }
+      @media screen and (max-width: 660px) {
+        margin-right: 0;
       }
     }
     @media screen and (max-width: 1380px) {

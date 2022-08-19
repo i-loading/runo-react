@@ -32,16 +32,16 @@ const MenuBurger = ({ classNameHandler }) => {
           </MenuButton>
           <MenuList>
             <div className={s.links}>
-              <NavLink to="runo-react" className={classNameHandler}>
+              <NavLink to="runo-react/" end className={classNameHandler}>
                 Home
               </NavLink>
-              <NavLink to="/runo-react/about" className={classNameHandler}>
+              <NavLink to="runo-react/about" className={classNameHandler}>
                 About
               </NavLink>
-              <NavLink to="/runo-react/posts" end className={classNameHandler}>
+              <NavLink to="runo-react/posts" end className={classNameHandler}>
                 Articles
               </NavLink>
-              <NavLink to="/runo-react/contact" className={classNameHandler}>
+              <NavLink to="runo-react/contact" className={classNameHandler}>
                 Contact us
               </NavLink>
             </div>
@@ -63,11 +63,11 @@ const Header = () => {
     <header className={s.header}>
       <div className={`${s.container} container`}>
         <h1>
-          <NavLink to="runo-react">Runo</NavLink>
+          <NavLink to="runo-react/">Runo</NavLink>
         </h1>
         <div>
           <ul className={s.links}>
-            <NavLink to="runo-react" end className={classNameHandler}>
+            <NavLink to="runo-react/" end className={classNameHandler}>
               Home
             </NavLink>
             <NavLink to="runo-react/about" className={classNameHandler}>

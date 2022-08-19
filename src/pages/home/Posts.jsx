@@ -186,7 +186,6 @@ const allPostsFilter = (category, amount = 8) => {
 const Posts = ({ postsAmount = 16 }) => {
   const checkPage =
     window.location.pathname === "/runo-react/posts" ? postsAmount : 8;
-  console.log(checkPage);
   const [posts, setPosts] = useState(() => allPostsFilter(null, checkPage));
   const [selectedItem, setSelectedItem] = useState(null);
 
