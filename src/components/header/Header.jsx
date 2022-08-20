@@ -64,7 +64,7 @@ const Header = () => {
     isActive ? "link-active" : undefined;
 
   return (
-    <header className={s.header}>
+    <header className={`${s.header}`}>
       <div className={`${s.container} container`}>
         <h1>
           <NavLink to="runo-react/">Runo</NavLink>

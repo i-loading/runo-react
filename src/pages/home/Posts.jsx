@@ -175,41 +175,34 @@ const buttons = [
   { id: Math.random().toString(), title: "Branding" },
 ];
 
-const allPostsFilter = (category, amount = 8) => {
-  if (category)
-    return allPosts
-      .slice(0, amount)
-      .filter((post) => post.category.toLocaleLowerCase() === category);
-  return allPosts.slice(0, amount);
+const allPostsFilter = (cat, amount = 8) => {
+  const slicedPosts = allPosts.slice(0, amount);
+
+  if (cat !== "all")
+    return slicedPosts.filter((p) => p.category.toLocaleLowerCase() === cat);
+  return slicedPosts;
 };
 
 const Posts = ({ postsAmount = 16 }) => {
   const checkPage =
     window.location.pathname === "/runo-react/posts" ? postsAmount : 8;
-  const [posts, setPosts] = useState(() => allPostsFilter(null, checkPage));
   const [selectedItem, setSelectedItem] = useState(null);
+  const [posts, setPosts] = useState(() => allPostsFilter("all", checkPage));
 
-  const filteredPosts = (category) => {
-    switch (category) {
-      case "adventure":
-        return setPosts(() => allPostsFilter(category, checkPage));
-      case "travel":
-        return setPosts(() => allPostsFilter(category, checkPage));
-      case "fashion":
-        return setPosts(() => allPostsFilter(category, checkPage));
-      case "technology":
-        return setPosts(() => allPostsFilter(category, checkPage));
-      case "branding":
-        return setPosts(() => allPostsFilter(category, checkPage));
-      default:
-        return setPosts(() => allPostsFilter(null, checkPage));
-    }
-  };
+  const filteredPosts = (category) =>
+    setPosts(() => allPostsFilter(category, checkPage));
+
   return (
     <>
       <main className={`${s.posts} container`}>
-        {checkPage === 8 ? <h2>Popular topics</h2> : null}
-        <div className={s.categories}>
+        {checkPage === 8 ? (
+          <h2 className="wow animate__animated animate__zoomIn animate__faster">
+            Popular topics
+          </h2>
+        ) : null}
+        <div
+          className={`${s.categories} wow animate__animated animate__zoomIn`}
+        >
           {buttons.map((b) => (
             <button
               key={b.id}
@@ -233,9 +226,14 @@ const Posts = ({ postsAmount = 16 }) => {
             </button>
           </NavLink>
         </div>
-        <div className={s.posts_wrapper}>
-          {posts.map((post) => (
-            <NavLink key={post.id} to={`/runo-react/posts/${post.id}`}>
+        <div className={`${s.posts_wrapper}`}>
+          {posts.map((post, index) => (
+            <NavLink
+              key={post.id}
+              to={`/runo-react/posts/${post.id}`}
+              className="wow animate__animated animate__slideInUp animate__faster"
+              data-wow-delay={`${index * 0.05}s`}
+            >
               <Post {...post} />
             </NavLink>
           ))}

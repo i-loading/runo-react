@@ -57,7 +57,9 @@ const SinglePost = () => {
   // let { postId } = useParams();
   return (
     <>
-      <section className={s["post-header"]}>
+      <section
+        className={`${s["post-header"]} wow animate__animated animate__fadeInDown`}
+      >
         <div>
           <span className={s.cat}>Fashion</span>
           <h2>Richird Norton photorealistic rendering as real photos</h2>
@@ -69,7 +71,9 @@ const SinglePost = () => {
         </div>
       </section>
       <div className="container">
-        <section className={s["post-info"]}>
+        <section
+          className={`${s["post-info"]} wow animate__animated animate__slideInUp`}
+        >
           <div className={s["read-info"]}>
             <span>08.08.2021</span>
             <div></div>
@@ -147,8 +151,13 @@ const SinglePost = () => {
         <div className="container">
           <h3>Related Posts</h3>
           <div className={s["related_wrap"]}>
-            {allPosts.map((post) => (
-              <NavLink key={post.id} to={`/runo-react/posts/${post.id}`}>
+            {allPosts.map((post, index) => (
+              <NavLink
+                key={post.id}
+                to={`/runo-react/posts/${post.id}`}
+                className="wow animate__animated animate__zoomIn"
+                data-wow-delay={`${index * 0.2}s`}
+              >
                 <Post {...post} />
               </NavLink>
             ))}

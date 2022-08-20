@@ -2,7 +2,9 @@ import s from "./BigPost.module.scss";
 
 const BigPost = () => {
   return (
-    <section className={s["post-big"]}>
+    <section
+      className={`${s["post-big"]} wow animate__animated animate__zoomIn`}
+    >
       <div>
         <span className={s.cat}>Fashion</span>
         <h2>Richird Norton photorealistic rendering as real photos</h2>

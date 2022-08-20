@@ -5,7 +5,9 @@ import Posts from "../home/Posts";
 const Articles = () => {
   return (
     <>
-      <section className={s["articles-header"]}>
+      <section
+        className={`${s["articles-header"]} wow animate__animated animate__fadeInDown`}
+      >
         <div>
           <h2>Articles</h2>
         </div>

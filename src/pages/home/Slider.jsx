@@ -40,7 +40,9 @@ const lastPosts = [
 
 const Slider = () => {
   return (
-    <section className={s.slider}>
+    <section
+      className={`${s.slider} wow animate__animated animate__fadeInDown`}
+    >
       <Swiper
         autoplay={{
           delay: 3000,

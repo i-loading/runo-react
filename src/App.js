@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import WOW from "wowjs";
+import "animate.css";
 
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -12,6 +16,12 @@ import NotFound from "./pages/not-found/NotFound";
 import SinglePost from "./pages/post/SinglePost";
 
 export default function App() {
+  useEffect(() => {
+    new WOW.WOW({
+      live: true,
+    }).init();
+  }, []);
+
   return (
     <Router>
       <Header />

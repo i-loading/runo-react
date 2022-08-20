@@ -3,14 +3,16 @@ import s from "./About.module.scss";
 const About = () => {
   return (
     <>
-      <section className={s["about-header"]}>
+      <section
+        className={`${s["about-header"]} wow animate__animated animate__fadeInDown`}
+      >
         <div>
           <h2>About us</h2>
         </div>
       </section>
       <section className={s["about-main"]}>
         <div className="container">
-          <p>
+          <p className="wow animate__animated animate__fadeInUp">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
             atque aperiam possimus dolores harum, laborum porro amet, ullam fuga
             quasi eligendi facilis eius tempore aliquid accusantium similique
@@ -36,11 +38,11 @@ const About = () => {
             accusantium dolorem ratione voluptate eum doloribus in saepe,
             debitis, dicta repudiandae.
           </p>
-          <h2 className={s.quote}>
+          <h2 className={`${s.quote} wow animate__animated animate__fadeInUp`}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, iste.
           </h2>
           <hr />
-          <p>
+          <p className="wow animate__animated animate__fadeInUp">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
             ducimus ipsa non veniam, tenetur, dolor accusamus consectetur
             eveniet ut dignissimos eos minima enim perspiciatis reiciendis iste
@@ -54,7 +56,7 @@ const About = () => {
             maiores ducimus recusandae, vel ab animi dolorum totam, consectetur
             vitae commodi repellat error?
           </p>
-          <p>
+          <p className="wow animate__animated animate__fadeInUp">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
             sed? Placeat aspernatur cupiditate ipsa corporis ut optio
             recusandae. Quibusdam sequi ipsam omnis quo totam sed distinctio

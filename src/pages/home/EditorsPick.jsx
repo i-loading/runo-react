@@ -52,8 +52,14 @@ const EditorsPick = () => {
     <section className={`${s["editor_wrap"]} container`}>
       <h2>Editor's Pick</h2>
       <div className={s["editor-posts"]}>
-        {editorsPosts.map((post) => (
-          <NavLink key={post.id} to={`posts/${post.id}`}>
+        {editorsPosts.map((post, index) => (
+          <NavLink
+            key={post.id}
+            to={`posts/${post.id}`}
+            className="wow animate__animated animate__bounceIn"
+            data-wow-delay={`${index * 0.2}s`}
+            data-wow-offset="150"
+          >
             <EditorPost {...post} />
           </NavLink>
         ))}
