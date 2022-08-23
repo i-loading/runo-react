@@ -220,7 +220,7 @@ const Posts = ({ postsAmount = 16 }) => {
               {b.title}
             </button>
           ))}
-          <NavLink to="/runo-react/posts">
+          <NavLink to="/posts">
             <button onClick={() => (buttons[0].activeFirst = true)}>
               View All
             </button>
@@ -230,7 +230,7 @@ const Posts = ({ postsAmount = 16 }) => {
           {posts.map((post, index) => (
             <NavLink
               key={post.id}
-              to={`/runo-react/posts/${post.id}`}
+              to={`/posts/${post.id}`}
               className="wow animate__animated animate__slideInUp animate__faster"
               data-wow-delay={`${index * 0.05}s`}
             >

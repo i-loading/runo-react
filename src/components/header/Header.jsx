@@ -33,16 +33,16 @@ const MenuBurger = ({ classNameHandler }) => {
           <MenuList>
             <MenuItem>
               <div className={s.links}>
-                <NavLink to="runo-react/" end className={classNameHandler}>
+                <NavLink to="/" end className={classNameHandler}>
                   Home
                 </NavLink>
-                <NavLink to="runo-react/about" className={classNameHandler}>
+                <NavLink to="/about" className={classNameHandler}>
                   About
                 </NavLink>
-                <NavLink to="runo-react/posts" end className={classNameHandler}>
+                <NavLink to="/posts" end className={classNameHandler}>
                   Articles
                 </NavLink>
-                <NavLink to="runo-react/contact" className={classNameHandler}>
+                <NavLink to="/contact" className={classNameHandler}>
                   Contact us
                 </NavLink>
               </div>
@@ -67,20 +67,20 @@ const Header = () => {
     <header className={`${s.header}`}>
       <div className={`${s.container} container`}>
         <h1>
-          <NavLink to="runo-react/">Runo</NavLink>
+          <NavLink to="/">Runo</NavLink>
         </h1>
         <div>
           <ul className={s.links}>
-            <NavLink to="runo-react/" end className={classNameHandler}>
+            <NavLink to="/" end className={classNameHandler}>
               Home
             </NavLink>
-            <NavLink to="runo-react/about" className={classNameHandler}>
+            <NavLink to="/about" className={classNameHandler}>
               About
             </NavLink>
-            <NavLink to="runo-react/posts" end className={classNameHandler}>
+            <NavLink to="/posts" end className={classNameHandler}>
               Articles
             </NavLink>
-            <NavLink to="runo-react/contact" className={classNameHandler}>
+            <NavLink to="/contact" className={classNameHandler}>
               Contact us
             </NavLink>
           </ul>

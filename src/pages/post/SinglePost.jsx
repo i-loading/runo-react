@@ -154,7 +154,7 @@ const SinglePost = () => {
             {allPosts.map((post, index) => (
               <NavLink
                 key={post.id}
-                to={`/runo-react/posts/${post.id}`}
+                to={`/posts/${post.id}`}
                 className="wow animate__animated animate__zoomIn"
                 data-wow-delay={`${index * 0.2}s`}
               >

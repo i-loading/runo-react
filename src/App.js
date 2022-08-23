@@ -23,14 +23,14 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="runo-react/">
       <Header />
       <Routes>
-        <Route path="runo-react/" element={<Home />} />
-        <Route path="runo-react/about" element={<About />} />
-        <Route path="runo-react/posts" element={<Articles />} />
-        <Route path="runo-react/posts/:postId" element={<SinglePost />} />
-        <Route path="runo-react/contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/posts" element={<Articles />} />
+        <Route path="/posts/:postId" element={<SinglePost />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
