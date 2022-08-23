@@ -10,7 +10,7 @@ const NotFound = () => {
         <p className={s.paragraph}>
           There is no <span>"{window.location.pathname.slice(1)}"</span> page
         </p>
-        <NavLink to="runo-react">
+        <NavLink to="/">
           <p className={s.cat}>Back to home page</p>
         </NavLink>
       </div>
